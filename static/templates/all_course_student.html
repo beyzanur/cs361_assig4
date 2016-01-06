@@ -1,0 +1,40 @@
+
+{% load staticfiles %}
+<html>
+
+<head>
+	<link href={% static "css/bootstrap.min.css" %} rel="stylesheet">
+	<link href={% static "css/jumbotron.css" %} rel="stylesheet">
+	<title>Courses</title>
+	<style>
+table, th, td {
+    border: 3px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+}
+
+</style>
+	
+</head>
+<body> 
+	 <div class="jumbotron" style="background-color:#C9F0DD;">
+<h1>Students</h1> 
+</body> 
+ </html>
+ <table style="width:60%" >
+
+
+   <tr>
+    <th>Student Names</th>
+
+  </tr>
+ {% for course in course_student_list %}
+  <tr>
+    <td>{{ course.first_name }}</td>
+
+  </tr>
+{% endfor %}
+</table>
+
